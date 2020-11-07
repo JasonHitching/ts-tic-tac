@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../css/styling.css'
 
 interface IProps {
@@ -6,10 +6,12 @@ interface IProps {
 }
 
 export const Square = (props: IProps) => {
+    const [value, setValue] = useState('');
+
     return (
         <div>
-            <button className="square" onClick={() => alert('click')} >
-                {props.value}
+            <button className="square" onClick={() => setValue('X')} >
+                {value}
             </button>
         </div>
     )
