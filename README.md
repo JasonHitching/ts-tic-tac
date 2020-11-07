@@ -2,7 +2,7 @@
 
 ## Install Packages
 
-Use ###'npm install' command within the project directory to install packages from the project dependencies
+Use ### 'npm install' command within the project directory to install packages from the project dependencies
 
 ## Available Scripts
 
