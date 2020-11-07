@@ -2,7 +2,7 @@
 
 ## Install Packages
 
-### 'npm install'
+### `npm install`
 
 Run the command within the project directory to install packages from the project dependencies
 
