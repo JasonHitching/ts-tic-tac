@@ -1,11 +1,9 @@
 import React from 'react';
 import './App.css';
-import { Board } from './components/GameBoard/Board'
+import { Game } from "./components/GameRunner/Game";
 
 function App() {
-  return (
-    <Board />
-  );
+  return <Game />;
 }
 
 export default App;

@@ -38,9 +38,16 @@ ul {
 
 .game {
   display: flex;
-  flex-direction: row;
+  margin: auto;
+  width: 50%;
+  flex-direction: column;
 }
 
 .game-info {
   margin-left: 20px;
+}
+
+.game-board {
+  width: 20%;
+  margin: 0 auto;
 }
