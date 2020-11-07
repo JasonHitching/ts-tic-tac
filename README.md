@@ -1,5 +1,9 @@
 # ts-tic-tac
 
+## Install Packages
+
+Use 'npm install' command within the project directory to install packages from the project dependencies
+
 ## Available Scripts
 
 In the project directory, you can run:
