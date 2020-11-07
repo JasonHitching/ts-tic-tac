@@ -1,18 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../css/styling.css'
 
 interface IProps {
-    value: number;
+  value: string;
+  onClick: () => void;
 }
 
-export const Square = (props: IProps) => {
-    const [value, setValue] = useState('');
-
-    return (
-        <div>
-            <button className="square" onClick={() => setValue('X')} >
-                {value}
-            </button>
-        </div>
-    )
-}
+export const Square: React.FC<IProps> = ({value, onClick }) => {
+  return (
+    <div>
+      <button className="square"     onClick={() => onClick()}>
+        {value}
+      </button>
+    </div>
+  );
+};
