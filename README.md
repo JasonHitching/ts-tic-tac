@@ -1,4 +1,6 @@
-# ts-tic-tac
+# Tic Tac Toe Game
+
+Tic Tac Toe game built using TypeScript and React.js
 
 ## Install Packages
 
