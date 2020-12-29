@@ -29,7 +29,26 @@ ul {
   display: grid;
   grid-template: repeat(3, 0fr) / repeat(3, 0fr);
 }
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  margin: auto;
+  width: 50%;
+  flex-direction: column;
+}
 
 .square:focus {
   outline: none;
+}
+
+.game-board {
+  width: 20%;
+  margin: 0 auto;
 }
