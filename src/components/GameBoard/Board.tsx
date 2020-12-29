@@ -14,7 +14,7 @@ export const Board: React.FC = () => {
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
-    
+
     squares[i] = xIsNext ? "X" : "0";
     const squareVals: string[] = squares.slice();
     setValue(squareVals);
@@ -38,24 +38,16 @@ export const Board: React.FC = () => {
   } else {
     status = "Next player: " + (xIsNext ? 'X' : '0');
   }
-  
+
   return (
     <div>
       <div className="status">{status}</div>
-      <div className="board-row">
-        {renderSquare(0)}
-        {renderSquare(1)}
-        {renderSquare(2)}
-      </div>
-      <div className="board-row">
-        {renderSquare(3)}
-        {renderSquare(4)}
-        {renderSquare(5)}
-      </div>
-      <div className="board-row">
-        {renderSquare(6)}
-        {renderSquare(7)}
-        {renderSquare(8)}
+      <div className="board">
+        {
+          (squares.map((square, i) => (
+            renderSquare(i)
+          )))
+        }
       </div>
     </div>
   );

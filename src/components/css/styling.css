@@ -3,12 +3,6 @@ ul {
   padding-left: 30px;
 }
 
-.board-row:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
 .status {
   margin-bottom: 10px;
 }
@@ -28,19 +22,14 @@ ul {
   width: 50px;
 }
 
+.board {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template: repeat(3, 0fr) / repeat(3, 0fr);
+}
+
 .square:focus {
   outline: none;
-}
-
-.kbd-navigation .square:focus {
-  background: #ddd;
-}
-
-.game {
-  display: flex;
-  flex-direction: row;
-}
-
-.game-info {
-  margin-left: 20px;
 }
