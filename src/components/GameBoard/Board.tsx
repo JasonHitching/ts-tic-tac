@@ -41,13 +41,18 @@ export const Board: React.FC = () => {
 
   return (
     <div>
-      <div className="status">{status}</div>
       <div className="board">
         {
           (squares.map((square, i) => (
             renderSquare(i)
           )))
         }
+      </div>
+      <div className="game-menu">
+        <div className="status">{status}</div>
+        <button onClick={() => setValue(Array(9).fill(null))}>
+          Restart
+      </button>
       </div>
     </div>
   );
