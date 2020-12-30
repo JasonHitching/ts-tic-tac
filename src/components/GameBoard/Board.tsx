@@ -1,8 +1,20 @@
 import React, { useState } from "react";
 import { Square } from "../BoardSquare/Square";
 import "../css/styling.css";
+import { Button } from "@material-ui/core";
+import ReplayIcon from '@material-ui/icons/Replay';
+import { makeStyles } from "@material-ui/core/styles"
+
+// Material UI styling
+const useStyles = makeStyles((theme) => ({
+  button: {
+    background: 'black',
+    margin: theme.spacing(1),
+  },
+}));
 
 export const Board: React.FC = () => {
+  const classes = useStyles();
   const [squares, setSquares] = useState<string[]>(Array(9).fill(""));
   const [xIsNext, setNext] = useState<boolean>(true);
 
@@ -50,9 +62,15 @@ export const Board: React.FC = () => {
       </div>
       <div className="game-menu">
         <div className="status">{status}</div>
-        <button onClick={() => setSquares(Array(9).fill(null))}>
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={() => setSquares(Array(9).fill(null))}
+          className={classes.button}
+          startIcon={<ReplayIcon />}
+        >
           Restart
-      </button>
+        </Button>
       </div>
     </div>
   );
