@@ -8,8 +8,8 @@ import { makeStyles } from "@material-ui/core/styles"
 // Material UI styling
 const useStyles = makeStyles((theme) => ({
   button: {
-    background: 'black',
-    margin: theme.spacing(1),
+    margin: theme.spacing(1.5),
+    fontWeight: 'bold',
   },
 }));
 
@@ -61,7 +61,6 @@ export const Board: React.FC = () => {
         }
       </div>
       <div className="game-menu">
-        <div className="status">{status}</div>
         <Button
           variant="contained"
           color="secondary"
@@ -71,6 +70,7 @@ export const Board: React.FC = () => {
         >
           Restart
         </Button>
+        <div className="status">{status}</div>
       </div>
     </div>
   );
