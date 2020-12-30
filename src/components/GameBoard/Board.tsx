@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1.5),
     fontWeight: 'bold',
+    backgroundColor: '#a3d2ca',
   },
 }));
 
@@ -62,8 +63,6 @@ export const Board: React.FC = () => {
       </div>
       <div className="game-menu">
         <Button
-          variant="contained"
-          color="secondary"
           onClick={() => setSquares(Array(9).fill(null))}
           className={classes.button}
           startIcon={<ReplayIcon />}
