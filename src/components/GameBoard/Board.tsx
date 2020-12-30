@@ -3,7 +3,7 @@ import { Square } from "../BoardSquare/Square";
 import "../css/styling.css";
 
 export const Board: React.FC = () => {
-  const [squares, setValue] = useState<string[]>(Array(9).fill(""));
+  const [squares, setSquares] = useState<string[]>(Array(9).fill(""));
   const [xIsNext, setNext] = useState<boolean>(true);
 
   /** Function to handle when the square class triggers onClick
@@ -17,7 +17,7 @@ export const Board: React.FC = () => {
 
     squares[i] = xIsNext ? "X" : "0";
     const squareVals: string[] = squares.slice();
-    setValue(squareVals);
+    setSquares(squareVals);
     setNext(!xIsNext);
   };
 
@@ -27,7 +27,7 @@ export const Board: React.FC = () => {
    *  changed an re-rendered
    */
   const renderSquare = (i: number) => {
-    return <Square value={squares[i]} onClick={() => handleClick(i)} />;
+    return <Square key={i} value={squares[i]} onClick={() => handleClick(i)} />;
   };
 
   const winner = calculateWinner(squares);
@@ -50,7 +50,7 @@ export const Board: React.FC = () => {
       </div>
       <div className="game-menu">
         <div className="status">{status}</div>
-        <button onClick={() => setValue(Array(9).fill(null))}>
+        <button onClick={() => setSquares(Array(9).fill(null))}>
           Restart
       </button>
       </div>
