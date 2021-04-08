@@ -1,6 +1,8 @@
 # Tic Tac Toe Game
 
-Tic Tac Toe game built using TypeScript and React.js
+Simple Tic Tac Toe game built using TypeScript and React.js
+
+<img width="243" alt="Screenshot 2021-04-08 at 14 56 31" src="https://user-images.githubusercontent.com/42877881/114039705-de6c3e80-987a-11eb-8f45-674b69181498.png">
 
 ## Install Packages
 
