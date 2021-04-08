@@ -27,6 +27,7 @@ You will also see any lint errors in the console.
 ------------ | -------------
 [React.js](https://reactjs.org/) | JavaScript UI Framework
 [Typescript](https://www.typescriptlang.org/) | Typed JavaScript language
+[Material UI](https://material-ui.com/) | UI Icons 
 [Visual Studio Code](https://code.visualstudio.com/) | IDE Used
 
 
